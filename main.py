@@ -39,21 +39,41 @@ class Clock():
 
         elif value_type == "hours":
             self.seconds = new_value
+
         else:
             print("please follow the given instractions...")
 
         #changing the time
 
-       # get_time()
-
         return
 
     def add_time(self, value_type, new_value):
         '''
-
-        :param value_type:
-        :param new_value:
+        will receive from the client what would he like to change(hours/minutes/seconds) and how much to add
+        :param value_type: hours/minutes/seconds
+        :type new_value:
         :return:
         '''
 
-        
+        #setting the new value
+        if value_type == "hours":
+            self.hours += new_value
+            if self.hours > 59:
+                lefover = self.hours - 60
+                self.hours = lefover
+
+        elif value_type == "minutes":
+            self.minutes += new_value
+            if self.minutes > 59:
+                lefover = self.minutes - 60
+                self.minutes = lefover
+
+        elif value_type == "seconds":
+            self.seconds += new_value
+            if self.seconds > 59:
+                lefover = self.seconds - 60
+                self.seconds = lefover
+        else:
+            print("please follow the given instractions...")
+
+        return

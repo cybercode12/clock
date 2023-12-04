@@ -12,7 +12,7 @@ class Clock():
 
 
 
-    def finalise_time(self):
+    def get_time(self):
         '''
         take all the variables and join them into a sting - 00:00
         :return: hours : minutes seconds
@@ -20,11 +20,3 @@ class Clock():
         time = str(self.hours) + ":" + str(self.minutes) + str(self.seconds)
         return time
 
-
-    def get_time(self):
-        '''
-        prints the time
-        :return: time
-        '''
-
-        pass

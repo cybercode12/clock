@@ -18,7 +18,7 @@ class Clock():
         :return: hours : minutes seconds
         '''
         self.time = str(self.hours) + ":" + str(self.minutes) + ":" + str(self.seconds)
-        return
+        return self.time
 
 
 
@@ -58,8 +58,8 @@ class Clock():
         #setting the new value
         if value_type == "hours":
             self.hours += new_value
-            if self.hours > 59:
-                lefover = self.hours - 60
+            if self.hours > 23:
+                lefover = self.hours - 24
                 self.hours = lefover
 
         elif value_type == "minutes":

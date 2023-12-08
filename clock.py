@@ -30,6 +30,26 @@ def main():
     clock = clock_class.Clock(hours, minutes, seconds)
     print('the time is: ', clock.time)
 
+    #creating a menu:
+    on = True
+    while on:
+        order = input('these are the allowed functions:\n-Print time\n-Change value\n-Add to time\n-EXIT\nplease enter a function:')
+        if order == "Print time":
+            pass
+
+        if order == "Change value":
+            pass
+
+        if order == "Add to time":
+            pass
+
+        if order == "EXIT":
+            on = False
+
+
+
+
+
 
 if __name__ == '__main__':
     main()

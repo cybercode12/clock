@@ -37,7 +37,7 @@ class Clock():
         elif value_type == "minutes":
             self.minutes = new_value
 
-        elif value_type == "hours":
+        elif value_type == "seconds":
             self.seconds = new_value
 
         else:
@@ -55,6 +55,7 @@ class Clock():
         :return:
         '''
 
+        new_value = int(new_value)
         #setting the new value
         if value_type == "hours":
             self.hours += new_value

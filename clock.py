@@ -12,7 +12,7 @@ def main():
       |; .          . |;
        \\\ .        . //
         \\'._' 30 '_.'/
-    jgs  '-._'--'_.-'
+         '-._'--'_.-'
              `""` ''')
     #getting the basic info
     on = True
@@ -35,17 +35,24 @@ def main():
     while on:
         order = input('these are the allowed functions:\n-Print time\n-Change value\n-Add to time\n-EXIT\nplease enter a function:')
         if order == "Print time":
-            pass
+            print(clock.get_time())
 
-        if order == "Change value":
-            pass
+        elif order == "Change value":
+            value_type, value = input("enter what value you would like to change(hours\\minutes\\seconds) and its new value: ").split(" ")
+            clock.set_time(value_type, value)
+            print(clock.get_time())
 
-        if order == "Add to time":
-            pass
+        elif order == "Add to time":
+            value_type, value = input("enter what value you would like to add to(hours\\minutes\\seconds) and how much to add: ").split(" ")
+            clock.add_time(value_type, value)
+            print(clock.get_time())
 
-        if order == "EXIT":
+        elif order == "EXIT":
             on = False
+            print("Goodbye!")
 
+        else:
+            print("please follow instructions!")
 
 
 

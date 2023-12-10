@@ -16,10 +16,10 @@ def main():
              `""` ''')
     #getting the basic info
     on = True
-    hours, minutes, seconds = input("please enter the info for the clock in the following order:\nhours minutes seconds\nenter only number from 0-24:\n").split(" ")
+    hours, minutes, seconds = input("please enter the info for the clock in the following order:\nhours minutes seconds\nhours can be a number from 0-24, and the hours and :\n").split(" ")
     hours, minutes, seconds = int(hours), int(minutes), int(seconds)
     while on:
-        for i in hours, minutes, seconds:
+        if hours > 24 or minutes > 60 or seconds > 60:
             if i > 24:
                 print("Please follow instractions! enter only nuber betwwen 0 -24")
                 hours, minutes, seconds = input("please enter the info for the clock in the following order:\nhours minutes seconds\nenter only numbers from 0-24:\n").split(" ")
